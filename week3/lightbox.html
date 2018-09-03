@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link href="path/to/lightbox.css" rel="stylesheet">
+    <script src="path/to/lightbox.js"></script>
+</head>
+<body>
+        <script>
+                function postResize() {
+      self.$lightbox.find('.lb-dataContainer').width(newWidth);
+      self.$lightbox.find('.lb-prevLink').height(newHeight);
+      self.$lightbox.find('.lb-nextLink').height(newHeight);
+      self.showImage();
+    }
+            </script>
+
+            
+<div class="lightbox">
+        <img src="images/trentinoItalyCastleSmall.jpg" data-lightbox="images"data-title="My caption">
+
+        <img src="images/trentinoItalyCastleSmall.jpg" data-lightbox="images"data-title="My caption">
+
+        <img src="images/trentinoItalyCastleSmall.jpg" data-lightbox="images"data-title="My caption">
+        
+        <img src="images/trentinoItalyCastleSmall.jpg" data-lightbox="images"data-title="My caption">
+</div>
+</body>
+</html>

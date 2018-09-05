@@ -8,7 +8,7 @@
 	<label>Surname:</label>
 	<input type="text" name=surname required>
 	<label>Access Rights:</label>
-	<input type="text" name=accessRights required>
+	<input type="text" name="accessRights" required>
 	<input type="hidden" name="action type" value="add"/>
 	<input type="submit">
 </form>

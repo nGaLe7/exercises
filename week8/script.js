@@ -19,6 +19,7 @@ var htmlCode = '';
 
 //$('output').load(url);
 //console.log(url);
+
 }
 
 function populateData() {

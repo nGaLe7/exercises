@@ -10,16 +10,17 @@ session_start();
 <link href="view/css/resCSS.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bodyCustom">
 <div class="flex-container">
 
  <div class="loginForm">
     <form action="controller/pdoLogin.php" method="post">
         <fieldset>
-            <h1 class="registerLink"><a id="registerLink2" href="view/pages/registration.php">Register</a></h1>
+            <h1><a href="view/pages/registration.php">Register</a></h1>
             <legend> Admin Login</legend>
             <label>Username:</label>
             <input type="text" name="username" required>
+            <input type="text" name="email" required>
             <label>Password:</label>
             <input type="text" name="password" required>
             <input type="submit" value=" Submit ">

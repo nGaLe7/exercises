@@ -9,12 +9,7 @@ html{
 	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size:18px; /* equal to 100% or 1em */
 }
-.registerLink {
-	background-color: black;
-}
-#registerLink2 {
-	background-color: black;
-}
+
 .loginForm {
 	background-color: lightgrey;
 }

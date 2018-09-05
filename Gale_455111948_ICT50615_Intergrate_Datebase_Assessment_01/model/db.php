@@ -5,7 +5,7 @@ $dbpassword = "";
 
 try {
 
-$conn = new PDO("mysql:host=localhost;dbname=formative47", $dbusername,$dbpassword);
+$conn = new PDO("mysql:host=localhost;dbname=newbooksdb", $dbusername,$dbpassword);
 // set attributes
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);

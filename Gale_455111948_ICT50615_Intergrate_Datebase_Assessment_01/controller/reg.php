@@ -9,7 +9,8 @@ $username = !empty($_POST['username'])? testUserInput(($_POST['username'])): nul
 $mypass = !empty($_POST['password'])? testUserInput(($_POST['password'])): null;
 $name = !empty($_POST['name']) ? testUserInput(($_POST['name'])): null;
 $surname = !empty($_POST['surname'])? testUserInput(($_POST['surname'])): null;
-$role = !empty($_POST['role']) ? testUserInput(($_POST['role'])): null;
+$email = !empty($_POST['email'])? testUserInput(($_POST['email'])): null;
+$accessRoll = !empty($_POST['accessRights']) ? testUserInput(($_POST['accessRights'])): null;
 $password= password_hash($mypass, PASSWORD_DEFAULT);
 
 }

@@ -2,6 +2,8 @@
 //print_r($_POST);
 //die();
 
+$_SESSION['sucessful'] = "Sucessful entry";
+$_SESSION['failed'] = "Failed entry";
 
 if(isset($_POST['submit'])) {
     $conn = new PDO("mysql:host=localhost;dbname=3dprint", 'root', '');
@@ -24,11 +26,11 @@ if(isset($_POST['submit'])) {
     if($result == 1) {
         header('index.php');
         echo ($conn->lastInsertId());
-        print_r($_SESSION["sucessful"]);
+        print_r($_SESSION['sucessful']);
     }
     else {
         header('index.php');        
-        print_r($_SESSION["failed"]);
+        print_r($_SESSION['failed']);
     }
 
 }

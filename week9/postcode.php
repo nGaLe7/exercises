@@ -26,6 +26,9 @@
         $newval = trim($newval);
         return $newval;
 }
+
+
+
 ?>  
 
        

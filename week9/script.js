@@ -26,3 +26,8 @@ function populateData() {
     //console.log('change');
     document.getElementById('pcode').value = document.getElementById('pcode_list').value;
 }
+
+function loadDiv2() {
+    $( "#loadScreen" ).load( "partners.php" );
+    $( "#loadScreen" ).html( 'loading' );
+}

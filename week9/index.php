@@ -16,7 +16,10 @@ session_start()
 <body>   
     
 <?php
-if (isset($_SESSION['user'])) {
+$_SESSION["sucessful"] = "Sucessful entry";
+$_SESSION["failed"] = "Failed entry";
+
+/*if (isset($_SESSION['user'])) {
     // this user has visited us before;    
     $_SESSION['count'] = $_SESSION['count'] + 1;
     print_r($_SESSION['count']);
@@ -25,7 +28,7 @@ else {
     $_SESSION['user'] = 'anon';
     $_SESSION['count'] = 1;
     print_r($_SESSION['count']);
-}
+}*/
 ?>
 
  <form>

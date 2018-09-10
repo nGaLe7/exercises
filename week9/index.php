@@ -12,6 +12,20 @@ session_start()
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
     <script src="script.js" defer ></script>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        function processForm(formid) {
+        $.ajax({
+            type: "post",
+            url: 'processform.php',
+            data: $('#enterForm').serialize(),
+            dataType:'html',
+        success: function (msg) {
+            $( "#divMessage" ).html( msg );
+        }
+    });
+  
+}
+</script>
 </head>
 <body>    
  <form>
@@ -24,6 +38,23 @@ session_start()
     
 <a href="partners.php" target="output">text</a>
 <iframe id="frameIt" name="output"></iframe>
+
+<form method="post" action="processform.php" id="enterForm" target="output" onsubmit="return processForm('enterForm')">
+<fieldset>
+<legend>Users table insert</legend>
+    <label>Full Name:</label>
+    <input type="text" name="FullName" required>
+    <label>Date of Birth:</label>
+    <input type="text" name="DateOfBirth" required>
+    <label>Email:</label>
+    <input type="text" name="Email" required>
+    <label>Mobile Number:</label>
+    <input type="text" name="MobileNumber" required>
+    <label>Address:</label>
+    <input type="text" name="Address" required>
+    <input type="submit" name="submit">
+  </fieldset>
+</form>
 
 </body>
 

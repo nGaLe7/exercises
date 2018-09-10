@@ -16,11 +16,16 @@ session_start()
 <body>   
     
 <?php
-// Set session variables
-$_SESSION["favcolor"] = "green";
-$_SESSION["favanimal"] = "cat";
-echo "Session variables are set.";
-
+if (isset($_SESSION['user'])) {
+    // this user has visited us before;    
+    $_SESSION['count'] = $_SESSION['count'] + 1;
+    print_r($_SESSION['count']);
+}
+else {
+    $_SESSION['user'] = 'anon';
+    $_SESSION['count'] = 1;
+    print_r($_SESSION['count']);
+}
 ?>
 
  <form>

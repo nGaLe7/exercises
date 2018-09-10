@@ -1,7 +1,6 @@
 <?php
 session_start()
 ?>
-
 <!Doctype html>
 <html>
 <head>
@@ -12,20 +11,7 @@ session_start()
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
     <script src="script.js" defer ></script>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script>
-        function processForm(formid) {
-        $.ajax({
-            type: "post",
-            url: 'processform.php',
-            data: $('#enterForm').serialize(),
-            dataType:'html',
-        success: function (msg) {
-            $( "#divMessage" ).html( msg );
-        }
-    });
-  
-}
-</script>
+    
 </head>
 <body>    
  <form>
@@ -36,26 +22,34 @@ session_start()
  
 </form>
     
-<a href="partners.php" target="output">text</a>
-<iframe id="frameIt" name="output"></iframe>
+<!--action="processform.php"-->
 
-<form method="post" action="processform.php" id="enterForm" target="output" onsubmit="return processForm('enterForm')">
+<form method="post" id="enterForm" action="processForm.php">
 <fieldset>
 <legend>Users table insert</legend>
     <label>Full Name:</label>
-    <input type="text" name="FullName" required>
+    <input type="text" name="valFullName" required>
     <label>Date of Birth:</label>
-    <input type="text" name="DateOfBirth" required>
+    <input type="text" name="valDateOfBirth" required>
     <label>Email:</label>
-    <input type="text" name="Email" required>
+    <input type="text" name="valEmail" required>
     <label>Mobile Number:</label>
-    <input type="text" name="MobileNumber" required>
+    <input type="text" name="valMobileNumber" required>
     <label>Address:</label>
-    <input type="text" name="Address" required>
+    <input type="text" name="valAddress" required>
     <input type="submit" name="submit">
   </fieldset>
 </form>
 
-</body>
+<?php/*
+// define variables and set to empty values
 
+?>
+<!--
+<a href="partners.php" target="output">text</a>
+<iframe id="frameIt" name="output"></iframe>
+-->
+
+</body>
+<!-- https://www.w3schools.com/php/php_form_validation.asp PHP form validation help -->
 </html>

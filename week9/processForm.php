@@ -6,14 +6,14 @@ if(isset($_POST['submit'])) {
     $conn = new PDO("mysql:host=localhost;dbname=3dprint", 'root', '');
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $sql = "INSERT INTO users (FullName, DateOfBirth, Email, MobileNumber, Address) 
-    VALUES ('{$_POST['FullName']}', '{$_POST['DateOfBirth']}', '{$_POST['Email']}', '{$_POST['MobileNumber']}', '{$_POST['Address']}')";  
+    VALUES ('{$_POST['valFullName']}', '{$_POST['valDateOfBirth']}', '{$_POST['valEmail']}', '{$_POST['valMobileNumber']}', '{$_POST['valAddress']}')";  
 
     $act = $conn->prepare($sql);
-    $act->bindParam('FullName', $_POST['FullName']);
-    $act->bindParam('DateOfBirth', $_POST['DateOfBirth']);
-    $act->bindParam('Email', $_POST['Email']);
-    $act->bindParam('MobileNumber', $_POST['MobileNumber']);
-    $act->bindParam('Address', $_POST['Address']);
+    $act->bindParam('FullName', $_POST['valFullName']);
+    $act->bindParam('DateOfBirth', $_POST['valDateOfBirth']);
+    $act->bindParam('Email', $_POST['valEmail']);
+    $act->bindParam('MobileNumber', $_POST['valMobileNumber']);
+    $act->bindParam('Address', $_POST['valAddress']);
     $act->bindParam('submit', $_POST['submit']);
     // ^ security against sql injection
 
@@ -21,6 +21,23 @@ if(isset($_POST['submit'])) {
     echo $conn->lastInsertId();
 
 }
+$name = $datebirth = $email = $mobile = $address = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = test_input($_POST["valFullName"]);
+  $datebirth = test_input($_POST["valDateOfBirth"]);
+  $email = test_input($_POST["valEmail"]);
+  $mobile = test_input($_POST["valMobileNumber"]);
+  $address = test_input($_POST["valAddress"]);
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
 /*
 if (isset($_POST['select'])) {
     

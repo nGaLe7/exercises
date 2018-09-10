@@ -28,6 +28,6 @@ function populateData() {
 }
 
 function loadDiv2() {
-    $( "#loadScreen" ).load( "partners.php" );
-    $( "#loadScreen" ).html( 'loading' );
+    $( "#loadScreen" ).load( "partners.php");
+    $( "#loadScreen" ).html( 'loading');
 }

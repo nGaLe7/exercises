@@ -21,11 +21,9 @@ session_start()
  </select>
  
 </form>
-<ul>    
-<li><a href="partners.php" target="output" onclick="loadDiv2()">Partners</a></li> 
-</ul>
-<iframe id="frameIt" name="output"></iframe>   
-<div id="loadScreen"></div>
+    
+<a href="partners.php" target="output">text</a>
+<iframe id="frameIt" name="output"></iframe>
 
 </body>
 

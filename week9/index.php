@@ -15,12 +15,12 @@ session_start()
 </head>
 <body>   
     
-<?php/*
+<?php
 // Set session variables
 $_SESSION["favcolor"] = "green";
 $_SESSION["favanimal"] = "cat";
 echo "Session variables are set.";
-*/
+
 ?>
 
  <form>

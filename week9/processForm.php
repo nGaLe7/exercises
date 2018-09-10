@@ -2,6 +2,7 @@
 //print_r($_POST);
 //die();
 
+
 if(isset($_POST['submit'])) {
     $conn = new PDO("mysql:host=localhost;dbname=3dprint", 'root', '');
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -27,6 +28,7 @@ if(isset($_POST['submit'])) {
     }
 
 }
+
 $name = $datebirth = $email = $mobile = $address = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

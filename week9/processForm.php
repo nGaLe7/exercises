@@ -18,7 +18,13 @@ if(isset($_POST['submit'])) {
     // ^ security against sql injection
 
     $act->execute();
-    echo $conn->lastInsertId();
+    if($result == 1) {
+        echo $conn->lastInsertId();
+        echo $_SESSION[" user data inserted"];
+    }
+    else {
+        echo "entry failed";
+    }
 
 }
 $name = $datebirth = $email = $mobile = $address = "";

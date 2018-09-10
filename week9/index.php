@@ -13,7 +13,16 @@ session_start()
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     
 </head>
-<body>    
+<body>   
+    
+<?php/*
+// Set session variables
+$_SESSION["favcolor"] = "green";
+$_SESSION["favanimal"] = "cat";
+echo "Session variables are set.";
+*/
+?>
+
  <form>
  <label>Check Postcode for Suburb</label>
  <input type="text" id="pcode" name="postcode" placeholder="Suburb or Postcode">
@@ -41,7 +50,7 @@ session_start()
   </fieldset>
 </form>
 
-<?php/*
+<?php
 // define variables and set to empty values
 
 ?>

@@ -6,8 +6,8 @@ session_start();
 <html>
 <head>
 <meta charset="utf-8">
-<title>Books</title>
-<link href="view/css/resCSS.css" rel="stylesheet">
+<title>3D Print Aus</title>
+<link href="view/css/styles.css" rel="stylesheet">
 </head>
 
 <body class="bodyCustom">

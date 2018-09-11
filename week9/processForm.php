@@ -1,9 +1,15 @@
 <?php 
 //print_r($_POST);
 //die();
+session_start();
 
-$_SESSION['sucessful'] = "Sucessful entry";
-$_SESSION['failed'] = "Failed entry";
+//$_SESSION['successful'] = "insert complete";
+//$_SESSION['failed'] = "insert failed";
+
+// https://stackoverflow.com/questions/10097887/using-sessions-session-variables-in-a-php-login-script
+
+$_SESSION['successful'] = "input successful";
+$_SESSION['failed'] = "input failure";
 
 if(isset($_POST['submit'])) {
     $conn = new PDO("mysql:host=localhost;dbname=3dprint", 'root', '');
@@ -24,13 +30,17 @@ if(isset($_POST['submit'])) {
     //$result = $conn->query($sql);
 
     if($result == 1) {
-        header('index.php');
+        set_time_limit(60); 
+        header('location:index.php');
         echo ($conn->lastInsertId());
-        print_r($_SESSION['sucessful']);
+        echo($_SESSION['successful']);
+        unset($_SESSION['failed']);
     }
     else {
-        header('index.php');        
-        print_r($_SESSION['failed']);
+        set_time_limit(60);
+        header('location:index.php');   
+        echo($_SESSION['failed']);
+        unset($_SESSION['successful']);
     }
 
 }
@@ -54,6 +64,20 @@ function test_input($data) {
   return $data;
 }
 
+// see below for possible validation fixs
+/*
+if (!empty([$_POST]))
+{
+ $username = !empty($_POST['username'])? testUserInput(($_POST['username'])): null;
+ $password = !empty($_POST['password'])? testUserInput(($_POST['password'])): null;
+try
+{
+$stmt = $conn->prepare("SELECT password FROM users WHERE username=:user");
+$stmt->bindParam(':user', $username);
+$stmt->execute();
+$rows = $stmt -> fetch();
+
+*/
 /*
 if (isset($_POST['select'])) {
     

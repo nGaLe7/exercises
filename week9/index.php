@@ -1,6 +1,9 @@
 <?php
-session_start()
+
+include 'processForm.php';
+
 ?>
+<!-- http://php.net/manual/en/session.examples.basic.php -->
 <!Doctype html>
 <html>
 <head>
@@ -17,6 +20,16 @@ session_start()
     
 <?php
 
+/*if (isset($_SESSION['successful'])) {
+    // this user has visited us before;    
+    $_SESSION['successful'] = $successful
+    print_r($_SESSION['count']);
+}
+else {
+    $_SESSION['user'] = 'anon';
+    $_SESSION['count'] = 1;
+    print_r($_SESSION['count']);
+}*/
 
 
 ?>
@@ -47,6 +60,8 @@ session_start()
     <input type="submit" name="submit">
   </fieldset>
 </form>
+
+<div id="divMessage">Placeholder text</div>
 
 <?php
 // define variables and set to empty values

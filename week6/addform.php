@@ -19,7 +19,7 @@ session_start();
             data: $('#enterForm').serialize(),
             dataType:'html',
         success: function (msg) {
-            $( "#divMessage" ).html( msg );
+            $( "#divMessage" ).html( "add user complete" );
         }
     });
   return false; // will always block entries to the database if left false

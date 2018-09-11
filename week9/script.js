@@ -17,6 +17,37 @@ var htmlCode = '';
     }
 });
 
+
+ /*       function processForm(enterForm) {
+        $.ajax({
+            type: "post",
+            url: 'processform.php',
+            data: $('#enterForm').serialize(),
+            dataType:'html',
+        success: function (msg) {
+            $( "#divMessage" ).html( "add user complete" );
+        }
+    });
+  //return false; // will always block entries to the database if left false
+}*/
+
+/*function doEmailCheck(enterForm) {
+    var ajaxUrl = 'view.php?email=' + emailAddr;
+       $.ajax({
+           type: "get",
+           url: ajaxUrl,
+           dataType:'html',
+       success: function (msg) {
+           if(msg == 'user exists') {         
+           $( "#errmsg" ).html( msg );}
+           else {
+               $( "#errmsg" ).html( '' );
+           }
+       }
+   });
+}*/
+
+
 //$('output').load(url);
 //console.log(url);
 

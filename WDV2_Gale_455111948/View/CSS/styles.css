@@ -3,7 +3,7 @@
 html, body, div, span, header, section, nav, article, aside, footer, p, h1, h2, h3, h4{
 	border:0; margin:0;padding:0;
 }
-
+/* rename all classes */
 html{
 	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size:18px; 

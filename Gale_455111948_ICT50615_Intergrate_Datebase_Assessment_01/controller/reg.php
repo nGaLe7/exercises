@@ -1,6 +1,6 @@
 <?php
 
-require("../model/db.php");
+require("../model/dataBase.php");
 require("../model/myFunctions.php");
 require("../model/testUserInput.php");
 if (!empty([$_POST])) {

@@ -1,5 +1,6 @@
 <?php 
 session_start();
+
 ?>
 
 <!doctype html>
@@ -15,7 +16,7 @@ session_start();
 <div class="flex-container">
 
  <div class="loginForm">
-    <form action="controller/pdoLogin.php" method="post">
+    <form action="controller/loginForm.php" method="post">
         <fieldset>
             <legend>Login</legend>
             <label>Username:</label>
@@ -33,15 +34,18 @@ session_start();
     <div class="menuItem">ABOUT US</div>
     <div class="menuItem">PRODUCTS</div>    
     <div class="menuItem">CONTACT</div>
-    <div class="menuItem"><a href="view/pages/registration.php">Admin Create User</a></div>
+    <div class="menuItem"><a href="view/pages/createUser.php">Admin Create User</a></div>
   </nav>
   <div class="contentLeft">left </div>
   <article>
-    <div class="holder"><img src="view/images/default.png" alt=""/></div>
+  <?php 
+  include 'controller/findCover.php';
+  ?>
+    <!--<div class="holder"><img src="view/images/default.png" alt=""/></div>
     <div class="holder"><img src="view/images/she.jpg" alt=""/></div>
     <div class="holder"><img src="view/images/donQuixote.jpg" alt=""/></div>
     <div class="holder"><img src="view/images/theHobbit.jpg" alt=""/></div>
-    <div class="holder"><img src="view/images/andThenThereWhereNone.jpg" alt=""/></div>
+    <div class="holder"><img src="view/images/andThenThereWhereNone.jpg" alt=""/></div> -->
     
   </article>
   <div class="contentRight">right </div>

@@ -6,11 +6,11 @@ session_start();
 <html>
 <head>
 <meta charset="utf-8">
-<title>My Books Website</title>
+<title>3D Print Aus</title>
 <link href="view/css/styles.css" rel="stylesheet">
 <link href="view/css/normalize.css" rel="stylesheet">
 </head>
-
+<!-- change all the CSS class names, reposition all content -->
 <body class="bodyCustom">
 <div class="flex-container">
 

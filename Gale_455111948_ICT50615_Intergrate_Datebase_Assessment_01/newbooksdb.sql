@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 05, 2018 at 07:38 AM
+-- Generation Time: Sep 12, 2018 at 07:52 AM
 -- Server version: 5.7.21
 -- PHP Version: 7.2.4
 
@@ -84,16 +84,16 @@ CREATE TABLE IF NOT EXISTS `book` (
 --
 
 INSERT INTO `book` (`BookID`, `BookTitle`, `OriginalTitle`, `YearofPublication`, `Genre`, `MillionsSold`, `LanguageWritten`, `AuthorID`, `coverImagePath`) VALUES
-(1, 'Don Quixote', 'El Ingenioso Hidalgo Don Quixote de la Mancha', 1605, 'Novel', 500, 'Spanish', 1, ''),
-(2, 'A Tale of Two Cities', 'A Tale of Two Cities', 1859, 'Historical Fiction', 200, 'English', 2, ''),
-(3, 'The Lord of the Rings', 'The Lord of the Rings', 1954, 'Fantasy/Adventure', 150, 'English', 3, ''),
-(4, 'The Litle Prince', 'Le Petit Prince', 1943, 'Fable', 142, 'French', 4, ''),
-(5, 'Harry Potter and the Sorcerer\'s Stone', 'Harry Potter and the Sorcerer\'s Stone', 1997, 'Fantasy Fiction', 107, 'English', 5, ''),
-(6, 'And Then There Were None', 'Ten Little Niggers', 1939, 'Mystery', 100, 'English', 6, ''),
-(7, 'The Dream of the Red Chamber', 'The Story of the Stone', 1792, 'Novel', 100, 'Chinese', 7, ''),
-(8, 'The Hobbit ', 'There and Back Again', 1937, 'High Fantasy', 100, 'English', 3, ''),
-(9, 'She: A History of Adventure', 'She', 1886, 'FIction', 100, 'English', 8, ''),
-(10, 'The Lion, the Witch and the Wardrobe', 'The Lion, the Witch and the Wardrobe', 1950, 'Fantasy', 85, 'English ', 9, '');
+(1, 'Don Quixote', 'El Ingenioso Hidalgo Don Quixote de la Mancha', 1605, 'Novel', 500, 'Spanish', 1, '../images/donQuixote.jpg'),
+(2, 'A Tale of Two Cities', 'A Tale of Two Cities', 1859, 'Historical Fiction', 200, 'English', 2, '../images/aTaleofTwoCities.jpg'),
+(3, 'The Lord of the Rings', 'The Lord of the Rings', 1954, 'Fantasy/Adventure', 150, 'English', 3, '../images/default.png'),
+(4, 'The Litle Prince', 'Le Petit Prince', 1943, 'Fable', 142, 'French', 4, '../images/theLittlePrince.jpg'),
+(5, 'Harry Potter and the Sorcerer\'s Stone', 'Harry Potter and the Sorcerer\'s Stone', 1997, 'Fantasy Fiction', 107, 'English', 5, '../images/default.png'),
+(6, 'And Then There Were None', 'Ten Little Niggers', 1939, 'Mystery', 100, 'English', 6, '../images/andThenThereWereNone.jpg'),
+(7, 'The Dream of the Red Chamber', 'The Story of the Stone', 1792, 'Novel', 100, 'Chinese', 7, '../images/redChamber.jpg'),
+(8, 'The Hobbit ', 'There and Back Again', 1937, 'High Fantasy', 100, 'English', 3, '../images/theHobbit.jpg'),
+(9, 'She: A History of Adventure', 'She', 1886, 'FIction', 100, 'English', 8, '../images/She.jpg'),
+(10, 'The Lion, the Witch and the Wardrobe', 'The Lion, the Witch and the Wardrobe', 1950, 'Fantasy', 85, 'English ', 9, '../images/default.png');
 
 -- --------------------------------------------------------
 

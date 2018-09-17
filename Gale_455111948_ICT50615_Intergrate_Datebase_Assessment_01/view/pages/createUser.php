@@ -1,4 +1,32 @@
-<form action="../../controller/reg.php"  method="post">
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My Books Website</title>
+<link href="../css/styles.css" rel="stylesheet">
+<link href="../css/normalize.css" rel="stylesheet">
+</head>
+
+<body class="bodyCustom">
+<div class="flex-container">
+ 
+  <header class="nav">header</header>
+
+  <nav class="nav">
+    <div class="menuItem"><a href="../../index.php">Login</a></div>
+    <div class="menuItem"><a href="#">Libary</a></div>
+    <div class="menuItem">placeholder</div>    
+    <div class="menuItem">placeholder</div>
+    <div class="menuItem">Placeholder</div>
+  </nav>
+
+<article class="article">
+
+<div class="regForm">
+		<fieldset class="fieldSet">
+			<legend>Create User</legend>
+  <form action="../../controller/reg.php"  method="post">
 	<label>Username:</label>
 	<input type="text" name=username required>
 	<label>Password:</label>
@@ -13,4 +41,26 @@
 	<input type="text" name="accessRights" required>
 	<input type="hidden" name="action type" value="add"/>
 	<input type="submit">
-</form>
+	</fieldset>
+	</form>
+</div>
+
+
+
+
+</article>
+
+
+
+<footer>
+   <p>footer</p>
+</footer>
+  
+</div>
+</body>
+</html>
+
+
+
+
+

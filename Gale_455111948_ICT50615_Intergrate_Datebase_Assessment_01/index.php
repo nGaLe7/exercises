@@ -1,6 +1,5 @@
 <?php 
 session_start();
-
 ?>
 
 <!doctype html>
@@ -14,10 +13,21 @@ session_start();
 
 <body class="bodyCustom">
 <div class="flex-container">
+ 
+  <header class="nav">header</header>
 
- <div class="loginForm">
+  <nav class="nav">
+    <div class="menuItem"><a href="#">Login</a></div>
+    <div class="menuItem"><a href="view/pages/mainLibary">Libary Home</a></div>
+    <div class="menuItem"><a href="view/pages/createUser.php">Admin only</a></div>    
+    <div class="menuItem">placeholder</div>
+    <div class="menuItem">placeholder</div>
+  </nav>
+
+  <article class="article">
+  <div class="loginForm">
     <form action="controller/loginForm.php" method="post">
-        <fieldset>
+        <fieldset class="fieldSet">
             <legend>Login</legend>
             <label>Username:</label>
             <input type="text" name="username" required>
@@ -25,35 +35,21 @@ session_start();
             <input type="text" name="password" required>
             <input type="submit" value=" Submit ">
         </fieldset>
+        <div>Registration is unavailable for non-admins</div>
     </form>
 </div>
 
-  <header class="nav">header </header>
-  <nav class="nav">
-    <div class="menuItem"><a href="#home">HOME</a></div>
-    <div class="menuItem">ABOUT US</div>
-    <div class="menuItem">PRODUCTS</div>    
-    <div class="menuItem">CONTACT</div>
-    <div class="menuItem"><a href="view/pages/createUser.php">Admin Create User</a></div>
-  </nav>
-  <div class="contentLeft">left </div>
-  <article>
-  <?php 
-  include 'controller/findCover.php';
-  ?>
-    <!--<div class="holder"><img src="view/images/default.png" alt=""/></div>
-    <div class="holder"><img src="view/images/she.jpg" alt=""/></div>
-    <div class="holder"><img src="view/images/donQuixote.jpg" alt=""/></div>
-    <div class="holder"><img src="view/images/theHobbit.jpg" alt=""/></div>
-    <div class="holder"><img src="view/images/andThenThereWhereNone.jpg" alt=""/></div> -->
-    
-  </article>
-  <div class="contentRight">right </div>
+<div><h1>PlaceHolder for content</h1></div>
+
+</article>
+
+  
 
 
-  <footer>
-    <p>footer</p>
-  </footer>
+
+<footer>
+   <p>footer</p>
+</footer>
   
 </div>
 </body>

@@ -2,6 +2,9 @@
 session_start();
 ?>
 
+<!-- Unless visitor logs on through this page, they will not be able to see many of the navigation elements
+use ajax to code this (possibly $_Sessions will be the answer [week 9 example]) -->
+
 <!doctype html>
 <html>
 <head>
@@ -9,16 +12,16 @@ session_start();
 <title>3D Print Aus Login</title>
 <link href="view/css/styles.css" rel="stylesheet">
 <link href="view/css/normalize.css" rel="stylesheet">
+<script src="view/JS/script.js" defer ></script>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
-<!-- change all the CSS class names, reposition all content -->
+<!-- change all the CSS class names, default php code site names reposition all content -->
 <body>
-
- 
 
 <header class="banner"><h1>Print Aus Banner</h1></header>   
 
 <div class="gridContain">
-    <div class="gridBox"><h2>Login</h2></div>
+    <div class="gridBox"></div>
 <div class="gridBox">
   <nav class="navLinks">
       <div><a href="#">Login</a></div>
@@ -31,31 +34,22 @@ session_start();
   </nav>
 </div>
 
-<div class="gridBox">
-
-    <div class="loginForm"> 
-    <form action="controller/pdoLogin.php" method="post">      
-         <div><label>Username:</label></div>
-        <div><input type="text" name="username" required></div>
-        <div><label>Password:</label></div>
-        <div><input type="text" name="password" required></div>
-        <div><input type="submit" value=" Submit"></div>    
-    </form>
-    </div>
+<div class="gridBox">    
 
 </div>
 
 
 <div class="gridBox">
-    <div class="gridContain2">
-    <div class="gridBox2"><p>Default text default</p></div>
-    <div class="gridBox2"><p>Default text default</p></div>
-    <div class="gridBox2"><p>Default text default</p></div>        
-    <div class="gridBox2"><p>Default text default</p></div>
-    <div class="gridBox2"><p>Default text default</p></div>        
-    <div class="gridBox2"><p>Default text default</p></div>        
-    <div class="gridBox2"><p>Default text default</p></div>        
-    <div class="gridBox2"><p>Default text default</p></div>               
+    <div class="loginForm"> 
+        <form action="controller/pdoLogin.php" method="post">  
+        <h2>Login</h2>    
+        <div><label>Username:</label></div>
+        <div><input type="text" name="username" required></div>
+        <div><label>Password:</label></div>
+        <div><input type="text" name="password" required></div>
+        <div><input type="submit" value=" Submit"></div>    
+        </form>
+    </div>            
 </div>
 
  

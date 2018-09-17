@@ -1,19 +1,14 @@
-<?php 
-session_start();
-?>
 
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>3D Print Aus Login</title>
-<link href="view/css/styles.css" rel="stylesheet">
-<link href="view/css/normalize.css" rel="stylesheet">
+<title>3D Print Aus Project News</title>
+<link href="../css/styles.css" rel="stylesheet">
+<link href="../css/normalize.css" rel="stylesheet">
 </head>
 <!-- change all the CSS class names, reposition all content -->
-<body>
-
- 
+<body> 
 
 <header class="banner"><h1>Print Aus Banner</h1></header>   
 
@@ -21,17 +16,16 @@ session_start();
     <div class="gridBox"><h2>Login</h2></div>
 <div class="gridBox">
   <nav class="navLinks">
-      <div><a href="#">Homepage</a></div>
-      <div><a href="view/pages/projectNews.php">Project News</a></div>
-      <div><a href="view/pages/archive.php">Archive</a></div>
-      <div><a href="view/pages/privacy.php">Privacy Policy</a></div>
-      <div><a href="view/pages/registration.php">Admin Create User</a></div>
-      <div><a href="view/pages/contact.php">Contact</a></div>
+      <div><a href="../../index.php">Homepage</a></div>
+      <div><a href="#">Project News</a></div>
+      <div><a href="archive.php">Archive</a></div>
+      <div><a href="privacy.php">Privacy Policy</a></div>
+      <div><a href="registration.php">Admin Create User</a></div>
+      <div><a href="contact.php">Contact</a></div>
   </nav>
 </div>
 
 <div class="gridBox">
-
     <div class="loginForm"> 
     <form action="controller/pdoLogin.php" method="post">      
          <div><label>Username:</label></div>
@@ -41,7 +35,6 @@ session_start();
         <div><input type="submit" value=" Submit"></div>    
     </form>
     </div>
-
 </div>
 
 

@@ -22,8 +22,7 @@ if($_REQUEST['action_type'] == 'add'){
           else {
            echo "failed to add details";
           }
-      
-    }
+       }
   }
   catch(PDOException $e)
   {
@@ -40,23 +39,23 @@ if (!empty([$_POST])) {
 
   }
 
-  try {
+try {
  
-    if($_REQUEST['action_type'] == 'add'){
-        $queryDetailsAddSucesss = addDetails($fullName, $DateOfBirth, $mobileNumber, $email, $address, $accessRights);
-              if ($queryDetailsAddSucesss){
-                header('location:../index.php');
-              }
-              else {
-                echo "failed to add details";
-              }
-          exit;
-        }
+  if($_REQUEST['action_type'] == 'add'){
+    $queryDetailsAddSucesss = addDetails($fullName, $DateOfBirth, $mobileNumber, $email, $address, $accessRights);
+      if ($queryDetailsAddSucesss){
+         header('location:../index.php');
+         }
+         else {
+         echo "failed to add details";
+         }
+        exit;
       }
-      catch(PDOException $e)
-      {
-      echo "Account creation problems".$e -> getMessage();
+    }
+  catch(PDOException $e)
+    {
+  echo "Account creation problems".$e -> getMessage();
     //die();
- }
+}
 
 ?>

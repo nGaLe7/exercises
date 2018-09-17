@@ -18,11 +18,11 @@
 <div class="gridBox">
   <nav class="navLinks">
       <div><a href="../../index.php">Homepage</a></div>
-      <div><a href="HTML/ProjectNews.html">Project News</a></div>
-      <div><a href="HTML/Archive.html">Archive</a></div>
-      <div><a href="HTML/Privacy.html">Privacy Policy</a></div>
+      <div><a href="projectNews.php">Project News</a></div>
+      <div><a href="archive.php">Archive</a></div>
+      <div><a href="privacy.php">Privacy Policy</a></div>
       <div><a href="#">Admin Create User</a></div>
-      <div><a href="HTML/Contact.html">Contact</a></div>
+      <div><a href="contact.php">Contact</a></div>
   </nav>
 </div>
 <div class="gridBox">

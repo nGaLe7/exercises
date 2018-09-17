@@ -32,10 +32,6 @@ body {
     background-color: rgb(84, 214, 149);
 }
 
-.loginForm {
-    
-}
-
 .banner {
     display: grid;
     background-color: lightgrey;
@@ -76,26 +72,48 @@ nav > div {
     border: 1px solid rgba(0, 0, 0, 0.8);
     text-align: center;
 }
+
+.loginForm {
+    background-color: rgb(104, 199, 104);
+    max-width: 90%;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    overflow: hidden;
+    justify-items: center;
+    align-content: center;
+}
+
+.regForm {
+    background-color: rgb(104, 199, 104);
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    overflow: hidden;
+    justify-items: center;
+    align-content: center;
+
+}
 /* Contact form */
 .feedback {
-    float: left;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 70%;
+    justify-items: center;
+    align-content: center;
+    align-items: center; 
+    width: 90%;
     background-color: rgb(94, 148, 94);
-    padding: 0%;    
+       
 }
 
 .field {
     background-color: rgb(94, 148, 94);
-    max-width: 70%;
+    max-width: 90%;
     margin-right: 10px;
+    align-items: center;
     border: 0;
 }
 
 input[text] , textarea {
-    width: 90%;
+    width: 70%;
 }

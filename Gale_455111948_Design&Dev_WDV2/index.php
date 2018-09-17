@@ -6,7 +6,7 @@ session_start();
 <html>
 <head>
 <meta charset="utf-8">
-<title>3D Print Aus</title>
+<title>3D Print Aus Login</title>
 <link href="view/css/styles.css" rel="stylesheet">
 <link href="view/css/normalize.css" rel="stylesheet">
 </head>
@@ -18,7 +18,7 @@ session_start();
 <header class="banner"><h1>Print Aus Banner</h1></header>   
 
 <div class="gridContain">
-    <div class="gridBox"><h3>Links</h3></div>
+    <div class="gridBox"><h2>Login</h2></div>
 <div class="gridBox">
   <nav class="navLinks">
       <div><a href="#">Homepage</a></div>
@@ -29,27 +29,19 @@ session_start();
       <div><a href="HTML/Contact.html">Contact</a></div>
   </nav>
 </div>
+
 <div class="gridBox">
-<div class="loginForm">
-    <form action="controller/pdoLogin.php" method="post">
-        <fieldset>
-            <legend>Login</legend>
-            <label>Username:</label>
-            <input type="text" name="username" required>
-            <label>Password:</label>
-            <input type="text" name="password" required>
-            <input type="submit" value=" Submit ">
-        </fieldset>
+
+    <div class="loginForm"> 
+    <form action="controller/pdoLogin.php" method="post">      
+         <div><label>Username:</label></div>
+        <div><input type="text" name="username" required></div>
+        <div><label>Password:</label></div>
+        <div><input type="text" name="password" required></div>
+        <div><input type="submit" value=" Submit"></div>    
     </form>
     </div>
-    <!--<p>
-    <h2>News feed</h2>
-        Default text Default text Default text Default text Default text Default text Default text Default text Default text 
-  </p>
-  <p>
-    <h2>Social media feed</h2>
-     Default text Default text Default text Default text Default text Default text Default text 
-  </p> -->
+
 </div>
 
 

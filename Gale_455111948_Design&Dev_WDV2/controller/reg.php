@@ -56,7 +56,7 @@ if (!empty([$_POST])) {
       catch(PDOException $e)
       {
       echo "Account creation problems".$e -> getMessage();
-      //die();
-      }
+    //die();
+ }
 
 ?>

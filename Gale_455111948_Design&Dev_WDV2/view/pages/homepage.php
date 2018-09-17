@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>3D Print Aus Contact Us</title>
+<title>3D Print Aus Homepage</title>
 <link href="../css/styles.css" rel="stylesheet">
 <link href="../css/normalize.css" rel="stylesheet">
 </head>
@@ -17,12 +17,12 @@
 <div class="gridBox">
   <nav class="navLinks">
       <div><a href="../../index.php">Login</a></div>
-      <div><a href="homepage.php">Homepage</a></div>
+      <div><a href="#">Homepage</a></div>
       <div><a href="projectNews.php">Project News</a></div>
       <div><a href="archive.php">Archive</a></div>
       <div><a href="privacy.php">Privacy Policy</a></div>
       <div><a href="registration.php">Admin Create User</a></div>
-      <div><a href="#">Contact</a></div>
+      <div><a href="contact.php">Contact</a></div>
   </nav>
 </div>
 

@@ -35,9 +35,7 @@ function addDetails($fullName, $DateOfBirth, $mobileNumber, $email, $address, $a
     return $result;
 }
 
-
 // details add and user/pass add functions needed as seperate? possible through same submit button?
-
 
 /*  Example transaction  - -http://www.mysqltutorial.org/mysql-transaction.aspx 
 

@@ -16,7 +16,8 @@
     <div class="gridBox"><h2>Login</h2></div>
 <div class="gridBox">
   <nav class="navLinks">
-      <div><a href="../../index.php">Homepage</a></div>
+      <div><a href="../../index.php">Login</a></div>
+      <div><a href="homepage.php">Homepage</a></div>
       <div><a href="projectNews.php">Project News</a></div>
       <div><a href="Archive.php">Archive</a></div>
       <div><a href="#">Privacy Policy</a></div>

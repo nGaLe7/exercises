@@ -17,7 +17,7 @@ try {
 if($_REQUEST['action_type'] == 'add'){
     $queryUserAddSuccess = addUser($username, $password);
       if ($queryUserAddSuccess){
-	  	header('location:../index.php');
+	  	header('location:../view/pages/homepage.php');
          }
           else {
            echo "failed to add details";
@@ -44,7 +44,8 @@ try {
   if($_REQUEST['action_type'] == 'add'){
     $queryDetailsAddSucesss = addDetails($fullName, $DateOfBirth, $mobileNumber, $email, $address, $accessRights);
       if ($queryDetailsAddSucesss){
-         header('location:../index.php');
+         header('location:../view/pages/registration.php');
+         echo "user has been created"
          }
          else {
          echo "failed to add details";

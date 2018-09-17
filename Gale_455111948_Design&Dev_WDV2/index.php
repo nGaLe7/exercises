@@ -21,7 +21,8 @@ session_start();
     <div class="gridBox"><h2>Login</h2></div>
 <div class="gridBox">
   <nav class="navLinks">
-      <div><a href="#">Homepage</a></div>
+      <div><a href="#">Login</a></div>
+      <div><a href="view/pages/homepage.php">Homepage</a></div>      
       <div><a href="view/pages/projectNews.php">Project News</a></div>
       <div><a href="view/pages/archive.php">Archive</a></div>
       <div><a href="view/pages/privacy.php">Privacy Policy</a></div>

@@ -15,7 +15,7 @@
 
   <nav class="nav">
     <div class="menuItem"><a href="../../index.php">Login</a></div>
-    <div class="menuItem"><a href="#">Libary</a></div>
+    <div class="menuItem"><a href="mainLibary.php">Libary</a></div>
     <div class="menuItem">placeholder</div>    
     <div class="menuItem">placeholder</div>
     <div class="menuItem">Placeholder</div>
@@ -23,46 +23,26 @@
 
 <article class="article">
 
-<div class="regForm">
+<div class="addForm">
 		<fieldset class="fieldSet">
-			<legend>Create User</legend>
+			<legend>Add New Book</legend>
   <form action="../../controller/reg.php"  method="post">
-	<label>Username:</label>
-	<input type="text" name=username required>
-	<label>Password:</label>
-	<input type="text" name=password required>
-	<label>Name:</label>
-	<input type="text" name=name required>
-	<label>Surname:</label>
-	<input type="text" name=surname required>
-	<label>Email:</label>
-	<input type="text" name="email" required>
-	<label>Access Rights:</label>
-	<input type="text" name="accessRights" required>
-	<label>Login ID number:</label>
-	<input type="text" name="loginID" required>
+	<label>Book title:</label>
+	<input type="text" name=title required>
+	<label>Original Book Title:</label>
+	<input type="text" name="Original"required>
+	<label>Year of Publication:</label>
+	<input type="text" name=publication required>
+	<label>Genre:</label>
+	<input type="text" name=genre required>
+	<label>Millions Sold:</label>
+	<input type="text" name="milSold" required>
+	<label>Language Writen:</label>
+    <input type="text" name="langWrite" required>
+    <label>Cover Image Path:</label>
+	<input type="text" name="imgPath" required>
 	<input type="hidden" name="action type" value="add"/>
 	<input type="submit">
 	</fieldset>
 	</form>
 </div>
-
-
-
-
-</article>
-
-
-
-<footer>
-   <p>footer</p>
-</footer>
-  
-</div>
-</body>
-</html>
-
-
-
-
-

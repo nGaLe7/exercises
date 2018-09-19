@@ -16,6 +16,7 @@ $result = $stmt-> fetchAll();
                 <figcaption>
                     <?php echo $row['BookTitle']; ?><br>
                     <?php echo '<p class="black">' . $row["MillionsSold"]." Million Sold".'<?p>';?><br>
+                    <a href="bookAdd.php">Add</a><br>
                     <a href="?link=edit&BookID=<?php echo $row['BookID'];?>">Edit</a><br>
                     <a href="?link=Delete&BookID=<?php echo $row['BookID'];?>">Delete</a><br>
                 </figcaption>

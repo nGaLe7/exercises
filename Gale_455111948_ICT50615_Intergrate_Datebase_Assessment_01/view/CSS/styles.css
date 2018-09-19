@@ -51,8 +51,16 @@ header {
 
 .bookCover {	
 	display:flex;
+	width: 25%;
 	float: left;
 	flex-wrap:wrap;
+	align-content: center;
+	align-items: center;
+	background-color: blueviolet;
+}
+
+.black {
+	color: white;
 }
 
 footer {
@@ -76,6 +84,16 @@ footer {
 }
 
 .regForm {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	vertical-align: top;
+	background-color: rgb(199, 158, 158);
+	height: 500px;
+	width: 50%;
+}
+
+.addForm {
 	display:flex;
 	justify-content:center;
 	align-items:center;

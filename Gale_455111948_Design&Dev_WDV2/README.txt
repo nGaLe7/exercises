@@ -52,18 +52,18 @@ Requirements
 
   PART B - VIEW
 
-4: Navigation <nav> elements defined for every user type        <-- use ajax to hide nav elements for particular users
+4: Navigation <nav> elements defined for every user type        <-- use ajax to hide nav elements for particular users?
 
 5: Three examples of a form submitting through relevant controller
 
 6: One example of CRUD implemented
 
-7: Three controllers exiting back to relevant user view   <-- add in another function other than register/login
+7: Three controllers exiting back to relevant user view   <-- add in another function other than register/login?
 
 
   PART C - DEBUG
 
-8: Error DIV & Message DIV defined in layout       <--- put in registration or deticated admin page
+8: Error DIV & Message DIV defined in layout       <--- $_Session error messages in footer as below
 
 9: Debug information DIV in footer, echo $_SESSION info       <--- put in registration or deticated admin page
 

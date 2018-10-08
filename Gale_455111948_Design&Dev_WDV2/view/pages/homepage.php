@@ -34,19 +34,6 @@
    
 </div>
 
-
-<!--<div class="gridBox">
-    <div class="gridContain2">
-    <div class="gridBox2"><p>Default text default</p></div>
-    <div class="gridBox2"><p>Default text default</p></div>
-    <div class="gridBox2"><p>Default text default</p></div>        
-    <div class="gridBox2"><p>Default text default</p></div>
-    <div class="gridBox2"><p>Default text default</p></div>        
-    <div class="gridBox2"><p>Default text default</p></div>        
-    <div class="gridBox2"><p>Default text default</p></div>        
-    <div class="gridBox2"><p>Default text default</p></div>               
-</div>-->
-
 <div class="gridBox">
     <div class="loginForm"> 
         <form action="../../controller/pdoLogin.php" method="post">  

@@ -47,7 +47,7 @@ if(isset($_GET['pageid']) {
             showLoggedin();
         }
     }
-    if($_GET['pageid'] == 'delacc') {
+    if($_GET['pageid'] == 'dodelacc') {
         if(isset($_SESSION['loggedin'])) {
             doDelAccount();
         }

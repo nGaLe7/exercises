@@ -70,6 +70,13 @@ function showFooter() {
     echo "</footer>";
 }
 
+function doLoginProcess() {
+    $conn = dbConnect();
+    $sql = "SELECT * FROM login where username = :username AND 
+    password = :password";
+    $stmt = $conn->prepare($sql);
+    $stmt-bindParam(':username')
+}
 
 // details add and user/pass add functions needed as seperate? possible through same submit button?
 

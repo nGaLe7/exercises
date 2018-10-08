@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 12, 2018 at 07:52 AM
+-- Generation Time: Sep 19, 2018 at 07:48 AM
 -- Server version: 5.7.21
 -- PHP Version: 7.2.4
 
@@ -196,7 +196,7 @@ CREATE TABLE IF NOT EXISTS `login` (
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`loginID`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `login`
@@ -204,7 +204,9 @@ CREATE TABLE IF NOT EXISTS `login` (
 
 INSERT INTO `login` (`loginID`, `username`, `password`) VALUES
 (1, 'joe', 'eoj'),
-(2, 'doge', 'much');
+(2, 'doge', 'much'),
+(3, 'q', '$2y$10$GjYXN1D6RlpdD7t9SLq0G..ndky6LiOn8JrywNDM8eUz8F63oz6S.'),
+(4, 'q', '$2y$10$iHT7Fgys4fY2dhNM6JGCSeDY3SfVU1wHwB0Iv.DIITfcTX2JSkQcW');
 
 -- --------------------------------------------------------
 
@@ -222,7 +224,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `loginID` int(10) UNSIGNED NOT NULL,
   PRIMARY KEY (`userID`),
   KEY `loginID` (`loginID`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
@@ -230,7 +232,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`userID`, `email`, `firstName`, `lastName`, `accessRights`, `loginID`) VALUES
 (1, 'joe@gmal.com', 'Joe', 'Al', '', 1),
-(2, 'LLZ', 'Ralph', 'Johnes', '', 2);
+(2, 'LLZ', 'Ralph', 'Johnes', '', 2),
+(3, 'q', 'q', 'q', 'none', 4);
 
 --
 -- Constraints for dumped tables

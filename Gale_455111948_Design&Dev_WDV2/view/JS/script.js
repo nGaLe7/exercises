@@ -8,10 +8,10 @@
 // possible solution for show/hide elements with $_SESSION https://stackoverflow.com/questions/19110684/php-ajax-how-to-show-hide-div-on-session-variable-value/19111020 
 // or in php https://forums.adobe.com/thread/962783
 
-/*    Examples of code, not suited for this. 
 
-  
- function processForm(enterForm) {
+// unknown why code does not produce results
+ 
+ function processForm(loginForm) {
         $.ajax({
             type: "post",
             url: 'processform.php',
@@ -22,7 +22,7 @@
         }
     });
   //return false; // will always block entries to the database if left false
-}*/
+}
 
 /*function doEmailCheck(enterForm) {
     var ajaxUrl = 'view.php?email=' + emailAddr;

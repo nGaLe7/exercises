@@ -66,11 +66,11 @@ if (isset($_GET['pageid'])) {
 
 }
 //debug on
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 //SQL
-$query = "INSERT INTO users (username, password)
-        VALUES ('{$_POST['username']}', '{$_POST['username']}'";
+//$query = "INSERT INTO users (username, password)
+//        VALUES ('{$_POST['username']}', '{$_POST['username']}'";
 
 // invalid query
 
@@ -86,9 +86,9 @@ $query = "INSERT INTO users (username, password)
 
 //another line here
 //???
-if ($result->num_rows > 0) 
+//if ($result->num_rows > 0) 
 
-//function selectAll() 
+function selectAll() {
 
     $conn  = new PDO("mysql:host=localhost;dbname=sunnies", 'root','');
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -104,7 +104,7 @@ if ($result->num_rows > 0)
         echo '<a href="del.php?rowid="'. $row['id'] . '>del</a>';
         echo '<a href="edit.php?rowid="'. $row['id'] . '>del</a>';
     }
-
+}
 
 ?>
 

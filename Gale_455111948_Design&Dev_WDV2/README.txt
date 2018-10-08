@@ -1,3 +1,31 @@
+
+Description:
+3Dprint is a Blog page for programs/projects using 3Dprinting Technology
+I.E: building/architecture projects, manufacturing.  
+
+Install:
+
+Git address: https://github.com/nGaLe7/Gale_455111948_Design-Dev_WDV2 
+
+Issues:
+
+
+need to hide nav items for unidentified users and users that should not access parts of the site eg. register user for admin only 
+(requires scripting with ajax looking at $_session)
+
+code for using sessions div message not displaying, unable to fix
+
+Check week 9 and connect for ajax code examples in use.??? no example found
+
+put bootStrap on pages for a better interface, but worry about the pratical first
+
+Have a Get user information for admins, without passwords, can use example code from database assignment to check what is needed to achive this. 
+
+Resources: 
+
+https://stackoverflow.com/questions/21396905/create-login-and-logout-session-in-php-and-database 
+
+
 Requirements
 
   PART A - FILE STRUCTURE
@@ -27,22 +55,6 @@ Requirements
 
 9: Debug information DIV in footer, echo $_SESSION info       <--- put in registration or deticated admin page
 
-
-
   PART D - HOSTED VERSION CONTROL
 
 9: Code commits (ten) made to a version control system       <--- perform outside of tafe
-
-
-
-Issues:
-
-
-need to hide nav items for unidentified users and users that should not access parts of the site eg. register user for admin only 
-(requires scripting with ajax looking at $_session)
-
-Check week 9 and connect for ajax code examples in use.
-
-put bootStrap on pages for a better interface, but worry about the pratical first
-
-Have a Get user information for admins, without passwords, can use example code from database assignment to check what is needed to achive this. 

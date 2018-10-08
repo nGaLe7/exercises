@@ -1,13 +1,17 @@
 
 Description:
-3Dprint is a Blog page for programs/projects using 3Dprinting Technology
-I.E: building/architecture projects, manufacturing.  
+3Dprint is a Blogging webpage for programs/projects using 3Dprinting Technology
+I.E: building/architecture projects, manufacturing, education.  
 
 Install:
 
 Git address: https://github.com/nGaLe7/Gale_455111948_Design-Dev_WDV2 
 
 Issues:
+
+
+
+database needs to be expanded to include projects, location for them to sit within website needs to be laid out.
 
 
 need to hide nav items for unidentified users and users that should not access parts of the site eg. register user for admin only 
@@ -24,6 +28,14 @@ Have a Get user information for admins, without passwords, can use example code 
 Resources: 
 
 https://stackoverflow.com/questions/21396905/create-login-and-logout-session-in-php-and-database 
+
+http://www.studentstutorial.com/php/login-logout-with-session.php
+
+
+
+
+
+
 
 
 Requirements

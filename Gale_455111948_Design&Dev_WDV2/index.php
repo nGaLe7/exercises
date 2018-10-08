@@ -1,5 +1,65 @@
 <?php 
 session_start();
+//example code, modify as needed
+include('model/session.php');
+include('model/database.php');
+include('view/pages.php');
+include('view/elements.php');
+showHeader();
+showMenu();
+
+if(isset($_GET['pageid']) {
+    if($_GET['pageid'] == 'login') { 
+        showlogin();
+    }
+    if($_GET['pageid'] == 'register') {
+        showRegister();
+    }
+    if($_GET['pageid'] == 'logout') {
+        showAreYouSure();
+    }
+    if($_GET['pageid'] == 'loggigin') {
+        if(isset($_POST) {
+            $res = doLoginProcess();
+        }
+    }
+    if($_GET['pageid'] == 'register') {
+        showRegister();
+    }
+    if($_GET['pageid'] == 'logout') {
+        doLogout();
+    }
+    if($_GET['pageid'] == 'delacc') {
+        showAreYouSure();
+    }
+    if($_GET['pageid'] == 'loggin') {
+        if(isset($_POST)) {
+            $res = doLoginProcess();
+        }
+    }
+    if($_GET['pageid'] == 'registering') {
+        if(isset($_POST)) {
+            doRegistrationProcess();
+        }
+    }
+    if($_GET['pageid'] == 'loggedin') {
+        if(isset(($_SESSION['loggedin'])) {
+            showLoggedin();
+        }
+    }
+    if($_GET['pageid'] == 'delacc') {
+        if(isset($_SESSION['loggedin'])) {
+            doDelAccount();
+        }
+    }
+}
+}else {
+    if(isset($_SESSION['loggedin'])) {
+
+    }
+}
+
+
 ?>
 
 <!-- Unless visitor logs on through this page, they will not be able to see many of the navigation elements
@@ -18,7 +78,11 @@ use ajax to code this (possibly $_Sessions will be the answer [week 9 example]) 
 <!-- change all the CSS class names, default php code site names reposition all content -->
 <body>
 
-<header class="banner"><h1>Print Aus Banner</h1></header>   
+<header class="banner"><h1>Print Aus Banner</h1></header> 
+
+<?php
+//header('location:view/pages/homepage.php');
+?>
 
 <div class="gridContain">
     <div class="gridBox"></div>
@@ -38,8 +102,19 @@ use ajax to code this (possibly $_Sessions will be the answer [week 9 example]) 
 
 </div>
 
-
 <div class="gridBox">
+    <div class="gridContain2">
+    <div class="gridBox2"><p>Default text default</p></div>
+    <div class="gridBox2"><p>Default text default</p></div>
+    <div class="gridBox2"><p>Default text default</p></div>        
+    <div class="gridBox2"><p>Default text default</p></div>
+    <div class="gridBox2"><p>Default text default</p></div>        
+    <div class="gridBox2"><p>Default text default</p></div>        
+    <div class="gridBox2"><p>Default text default</p></div>        
+    <div class="gridBox2"><p>Default text default</p></div>               
+</div>
+
+<!--<div class="gridBox">
     <div class="loginForm"> 
         <form action="controller/pdoLogin.php" method="post">  
         <h2>Login</h2>    
@@ -50,7 +125,7 @@ use ajax to code this (possibly $_Sessions will be the answer [week 9 example]) 
         <div><input type="submit" value=" Submit"></div>    
         </form>
     </div>            
-</div>
+</div>-->
 
  
 </div>

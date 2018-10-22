@@ -14,12 +14,15 @@
   <header class="nav">header</header>
 
   <nav class="nav">
-    <div class="menuItem"><a href="../../index.php">Login</a></div>
-    <div class="menuItem"><a href="#">Libary</a></div>
-    <div class="menuItem">placeholder</div>    
-    <div class="menuItem">placeholder</div>
-    <div class="menuItem">Placeholder</div>
-  </nav>
+    <div class="menuItem"><a href="../../index.php">Home</a></div>
+	<div class="menuItem"><a href="mainLibary.php">View Books</a></div>
+    <div class="menuItem"><a href="bookAdd.php">Add Books</a></div>
+    <div class="menuItem"><a href="#">Admin Only</a></div>      
+    <div class="menuItem"><a href="policy.html">Policies list</a></div>
+ </nav>
+
+
+
 
 <article class="article">
 
@@ -39,8 +42,6 @@
 	<input type="text" name="email" required>
 	<label>Access Rights:</label>
 	<input type="text" name="accessRights" required>
-	<label>Login ID number:</label>
-	<input type="text" name="loginID" required>
 	<input type="hidden" name="action type" value="add"/>
 	<input type="submit">
 	</fieldset>

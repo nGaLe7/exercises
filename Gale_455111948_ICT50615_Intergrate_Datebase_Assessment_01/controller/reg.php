@@ -11,14 +11,13 @@ $name = !empty($_POST['name']) ? testUserInput(($_POST['name'])): null;
 $surname = !empty($_POST['surname'])? testUserInput(($_POST['surname'])): null;
 $email = !empty($_POST['email'])? testUserInput(($_POST['email'])): null;
 $accessRole = !empty($_POST['accessRights']) ? testUserInput(($_POST['accessRights'])): null;
-$loginID = !empty($_POST['loginID']) ? testUserInput(($_POST['loginID'])): null;
 $password= password_hash($mypass, PASSWORD_DEFAULT);
 
 }
 try {
  
 if($_REQUEST['action_type'] == 'add'){
-  	$querySuccess = registerUser($username, $password, $accessRole, $email, $name, $surname, $loginID);
+  	$querySuccess = registerUser($username, $password, $accessRole, $email, $name, $surname);
           if ($querySuccess){
 	  	header('location:../index.php');
          }

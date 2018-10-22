@@ -1,5 +1,7 @@
 <?php
   // working transaction
+
+  
 function registerUser($username, $password, $accessRole, $email, $name, $surname)
     {
         global $conn;
@@ -10,25 +12,44 @@ function registerUser($username, $password, $accessRole, $email, $name, $surname
     $stmt->bindValue(':password', $password);
     $stmt->execute();
 
-    $loginID = $conn->lastInsertId();
-    $stmt = $conn->prepare("INSERT INTO users(email, firstName, lastName, accessRights, loginID) VALUES (:email, :name, :surname, :accessRights, :loginID)");
+    
+    $stmt = $conn->prepare("INSERT INTO users(email, firstName, lastName, accessRights) VALUES (:email, :name, :surname, :accessRights)");
     $stmt->bindValue(':email', $email);
     $stmt->bindValue(':name', $name);
     $stmt->bindValue(':surname', $surname);   
     $stmt->bindValue(':accessRights', $accessRole);
-    $stmt->bindValue(':loginID', $loginID);
+    // insert id FOREIGN key? how
+    $conn->lastInsertId();
     $stmt->execute();
     $conn->commit();
     }
 
-    catch(PDOException $ex) {
+        catch(PDOException $ex) {
         //code to roll back 
         $conn->rollBack();
         throw $ex;
     }
 
 }
+/*
+public function add($data)
+{
 
+    $temp = array(
+        'Email' => $data['Email'],
+        'loginID'=> 1
+    );    
+    return $this->db->insert('login',$temp);
+    return $this->db->insert_id();
+    $data['loginID'] = $this->db->insert_id(); // Use insert_id()
+    return $this->db->insert('users',$data);
+}
+*/
+
+// http://domexception.blogspot.com/2013/08/php-get-list-of-possible-foreign-key.html
+
+//  https://stackoverflow.com/questions/27619534/how-to-store-last-insert-id-in-database-as-foreign-key-in-another-table
+// https://stackoverflow.com/questions/46069461/last-insert-id-is-changed-while-using-foreign-key
 
 /*
 function addUser($username, $password, $accessRole, $email, $name, $surname) {

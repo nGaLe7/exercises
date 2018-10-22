@@ -18,13 +18,11 @@ session_start();
 
   <nav class="nav">
     <div class="menuItem"><a href="#">Home</a></div>
-    <div class="menuItem"><a href="view/pages/mainLibary">View Books</a></div>
-    <div class="menuItem"><a href="view/pages/mainLibary">Add Books</a></div>
-    
-    
+    <div class="menuItem"><a href="view/pages/mainLibary.php">View Books</a></div>
+    <div class="menuItem"><a href="view/pages/bookAdd.php">Add Books</a></div> 
     <div class="menuItem"><a href="view/pages/createUser.php">Admin only</a></div>    
-    <div class="menuItem">placeholder</div>
-    <div class="menuItem">placeholder</div>
+    <div class="menuItem"><a href="view/pages/policy.html">Policies list</a></div>
+    
   </nav>
 
   <article class="article">

@@ -14,12 +14,15 @@
   <header class="nav">header</header>
 
   <nav class="nav">
-    <div class="menuItem"><a href="../../index.php">Login</a></div>
-    <div class="menuItem"><a href="mainLibary.php">Libary</a></div>
-    <div class="menuItem">placeholder</div>    
-    <div class="menuItem">placeholder</div>
-    <div class="menuItem">Placeholder</div>
+    <div class="menuItem"><a href="../../index.php">Home</a></div>
+    <div class="menuItem"><a href="mainLibary.php">View Books</a></div>
+    <div class="menuItem"><a href="#">Add Books</a></div>
+    <div class="menuItem"><a href="createUser.php">Admin Only</a></div>
+    <div class="menuItem"><a href="policy.html">Policies list</a></div>
   </nav>
+
+
+        
 
 <article class="article">
 

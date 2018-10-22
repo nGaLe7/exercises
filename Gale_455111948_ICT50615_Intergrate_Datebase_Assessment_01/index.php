@@ -17,8 +17,9 @@ session_start();
   <header class="nav">header</header>
 
   <nav class="nav">
-    <div class="menuItem"><a href="#">Login</a></div>
-    <div class="menuItem"><a href="view/pages/mainLibary">Libary Home</a></div>
+    <div class="menuItem"><a href="view/pages/mainLibary">View Books</a></div>
+    <div class="menuItem"><a href="#">Home</a></div>
+    
     <div class="menuItem"><a href="view/pages/createUser.php">Admin only</a></div>    
     <div class="menuItem">placeholder</div>
     <div class="menuItem">placeholder</div>

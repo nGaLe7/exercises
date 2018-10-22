@@ -1,39 +1,18 @@
-
 Description:
-3Dprint is a Blogging webpage for programs/projects using 3Dprinting Technology
-I.E: building/architecture projects, manufacturing, education.  
 
-Install:
-
-Git address: https://github.com/nGaLe7/Gale_455111948_Design-Dev_WDV2 
-
-Issues:
+3Dprint site is a basic blog page with limited login functionality, build to display articles and archive older documents.
 
 
 
-database needs to be expanded to include projects, location for them to sit within website needs to be laid out.
+Issues: 
 
+File pathing incorrect leading to 404 errors, unknown what path should be used for "include" php function to re-use html layout for several pages
 
-need to hide nav items for unidentified users and users that should not access parts of the site eg. register user for admin only 
-(requires scripting with ajax looking at $_session)
+Registration form can't be split to several pages from index to deticated registration form without path errors. 
 
-code for using sessions div message not displaying, unable to fix
+Problems finding solution to hide elements for different user access i.e admin and guest users. 
 
-Check week 9 and connect for ajax code examples in use.??? no example found
-
-put bootStrap on pages for a better interface, but worry about the pratical first
-
-Have a Get user information for admins, without passwords, can use example code from database assignment to check what is needed to achive this. 
-
-Resources: 
-
-https://stackoverflow.com/questions/21396905/create-login-and-logout-session-in-php-and-database 
-
-http://www.studentstutorial.com/php/login-logout-with-session.php
-
-
-
-
+Problems fitting 
 
 
 
@@ -52,21 +31,109 @@ Requirements
 
   PART B - VIEW
 
-4: Navigation <nav> elements defined for every user type        <-- use ajax to hide nav elements for particular users?
+4: Navigation <nav> elements defined for every user type        <-- use ajax to hide nav elements for particular users
 
 5: Three examples of a form submitting through relevant controller
 
 6: One example of CRUD implemented
 
-7: Three controllers exiting back to relevant user view   <-- add in another function other than register/login?
+7: Three controllers exiting back to relevant user view   <-- add in another function other than register/login
 
 
   PART C - DEBUG
 
-8: Error DIV & Message DIV defined in layout       <--- $_Session error messages in footer as below
+8: Error DIV & Message DIV defined in layout       <--- put in registration or deticated admin page
 
 9: Debug information DIV in footer, echo $_SESSION info       <--- put in registration or deticated admin page
+
+
 
   PART D - HOSTED VERSION CONTROL
 
 9: Code commits (ten) made to a version control system       <--- perform outside of tafe
+
+https://github.com/nGaLe7/Gale_455111948_Design-Dev_WDV2 
+
+
+
+
+EG of working transaction with mySQL as multi queries need to be seperated:
+<?php
+
+//$salary = 5000;
+$salary = '$5000';
+
+/* Change database details according to your database */
+$dbConnection = mysqli_connect('localhost', 'robin', 'robin123', 'company_db');
+
+mysqli_autocommit($dbConnection, false);
+
+$flag = true;
+
+$query1 = "INSERT INTO `employee` (`id`, `first_name`, `last_name`, `job_title`, `salary`) VALUES (9, 'Grace', 'Williams', 'Softwaree Engineer', $salary)";
+$query2 = "INSERT INTO `telephone` (`id`, `employee_id`, `type`, `no`) VALUES (13, 9, 'mobile', '270-598712')";
+
+$result = mysqli_query($dbConnection, $query1);
+
+if (!$result) {
+	$flag = false;
+    echo "Error details: " . mysqli_error($dbConnection) . ".";
+}
+
+$result = mysqli_query($dbConnection, $query2);
+
+if (!$result) {
+	$flag = false;
+    echo "Error details: " . mysqli_error($dbConnection) . ".";
+}
+
+if ($flag) {
+    mysqli_commit($dbConnection);
+    echo "All queries were executed successfully";
+} else {
+	mysqli_rollback($dbConnection);
+    echo "All queries were rolled back";
+} 
+
+mysqli_close($dbConnection);
+
+?>
+
+
+other transaction example without mysqli (<- do not use mySQLi)
+
+/ when using PDO
+$pdo = new PDO('mysql:host=localhost;dbname=mydb;charset=utf8', $user, $pass, [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // this is important
+]);
+
+
+// follows this convention
+function transaction(Closure $callback)
+{
+    global $pdo; // let's assume our PDO connection is in a global var
+
+    // start the transaction outside of the try block, because
+    // you don't want to rollback a transaction that failed to start
+    $pdo->beginTransaction(); 
+    try
+    {
+        $callback();
+        $pdo->commit(); 
+    }
+    catch (Exception $e) // it's better to replace this with Throwable on PHP 7+
+    {
+        $pdo->rollBack();
+        throw $e; // we still have to complain about the exception
+    }
+}
+
+//Usage example:
+transaction(function()
+{
+    global $pdo;
+
+    $pdo->query('first query');
+    $pdo->query('second query');
+    $pdo->query('third query');
+});

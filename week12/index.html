@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Week 12 exercise, Add, Edit User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="../controller/script.js"></script>
+</head>
+<body>
+ 
+<div>	
+ <form id="addForm"  action="../model/database.php"  method="post">
+    <h2>Add User</h2>
+     <label>Username:</label>
+     <input type="text" name=username placeholder="username">
+     <label>Password:</label>
+     <input type="text" name=password placeholder="password">
+     <label>Full Name:</label>
+     <input type="text" name=fullName placeholder="Full Name">
+     <label>Date of Birth:</label>
+     <input type="date" name=DateOfBirth placeholder="Date Of Birth">	
+     <label>Mobile Number:</label>
+     <input type="text" name="mobileNumber" placeholder="Mobile Number">
+     <label>Email:</label>
+     <input type="text" name="email" placeholder="Email">
+     <label>Address:</label>
+     <input type="text" name="address" placeholder="Address">
+     <input type="hidden" name="action type" value="add"/>
+    <input type="submit">
+ </form>                 
+</div>
+
+<div>	
+    <form id="editForm" action="../model/database.php"  method="get">
+       <h2>Edit User</h2>
+        <label>Select User</label> <!--Selects by userID to userName-->
+        <select id="selectUser"></select>
+        <label>Username:</label>
+        <input type="text" name=editUser placeholder="username">
+        <label>Password:</label>
+        <input type="text" name=editPass placeholder="password">
+        <label>Full Name:</label>
+        <input type="text" name=editName placeholder="Full Name">
+        <label>Date of Birth:</label>
+        <input type="date" name=editDate placeholder="Date Of Birth">	
+        <label>Mobile Number:</label>
+        <input type="text" name="editMobile" placeholder="Mobile Number">
+        <label>Email:</label>
+        <input type="text" name="editEmail" placeholder="Email">
+        <label>Address:</label>
+        <input type="text" name="editAddress" placeholder="Address">
+        <input type="hidden" name="action type" value="add"/>
+       <input type="submit">
+    </form>                 
+   </div>
+
+</body>
+</html>

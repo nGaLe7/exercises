@@ -11,7 +11,7 @@
 
 // unknown why code does not produce results
  
- function processForm(loginForm) {
+ /*function processForm(loginForm) {
         $.ajax({
             type: "post",
             url: 'processform.php',
@@ -20,9 +20,12 @@
         success: function (msg) {
             $( "#divMessage" ).html( "add user complete" );
         }
-    });
+    });*/
+
+
+
   //return false; // will always block entries to the database if left false
-}
+
 
 /*function doEmailCheck(enterForm) {
     var ajaxUrl = 'view.php?email=' + emailAddr;

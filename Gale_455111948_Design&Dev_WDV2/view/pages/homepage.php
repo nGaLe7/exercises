@@ -34,17 +34,11 @@
    
 </div>
 
+
 <div class="gridBox">
-    <div class="loginForm"> 
-        <form action="../../controller/pdoLogin.php" method="post">  
-        <h2>Login</h2>    
-        <div><label>Username:</label></div>
-        <div><input type="text" name="username" required></div>
-        <div><label>Password:</label></div>
-        <div><input type="text" name="password" required></div>
-        <div><input type="submit" value=" Submit"></div>    
-        </form>
-    </div>            
+    <div class="gridContain2">
+    <div class="gridBox2"><?php include('../../index.php');?></div>
+                  
 </div>
 
  
@@ -57,9 +51,3 @@
 </div>
 </body>
 </html>
-
-
-
-
-
-

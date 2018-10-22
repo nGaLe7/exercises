@@ -36,7 +36,7 @@ if (!empty([$_POST])) {
   $mobileNumber = !empty($_POST['mobileNumber'])? testUserInput(($_POST['mobileNumber'])): null;
   $email = !empty($_POST['email'])? testUserInput(($_POST['email'])): null;
   $address = !empty($_POST['address'])? testUserInput(($_POST['address'])): null;
-
+  $accessRights = !empty($_POST['accessRights'])? testUserInput(($_POST['accessRights'])): null;
   }
 
 try {
